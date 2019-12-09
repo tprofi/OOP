@@ -7,46 +7,50 @@ public class Auto {
     private Engine engine;
     private int currentSpeed;
 
-    Auto (String producer, String model, Engine engine) {
+    Auto(String producer, String model, Engine engine) {
         this.producer = producer;
         this.model = model;
         this.engine = engine;
     }
 
-    void start () {
+    void start() {
         isRunning = true;
         currentSpeed = 10;
         System.out.println("Auto is starting");
     }
 
-    void stop () {
+    void stop() {
         isRunning = false;
         currentSpeed = 0;
         System.out.println("Auto is stopped");
     }
 
-    public void accelerate (int kmPerHour) {
+    public void accelerate(int kmPerHour) {
         currentSpeed += kmPerHour;
         System.out.println("Accelerating. Current speed is " + kmPerHour + " km Per Hour");
     }
 
-    public String getProducer () {
+    public String getProducer() {
         return producer;
     }
 
-    public String getModel () {
+    public String getModel() {
         return model;
     }
 
-    public int getCurrentSpeed () {
+    public int getCurrentSpeed() {
         return currentSpeed;
     }
 
-    public boolean isRunning () {
+    public boolean isRunning() {
         return isRunning;
     }
 
-    Engine getEngine () {
+    Engine getEngine() {
         return engine;
+    }
+
+    public void setCurrentSpeed(int currentSpeed) {
+        this.currentSpeed = currentSpeed;
     }
 }
