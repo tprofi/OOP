@@ -17,11 +17,6 @@ public class Bus extends FuelAuto {
         System.out.println("Bus is starting");
     }
 
-    public void fuelUp() {
-        int volume = getTankVolume() - getAvailablePetrol();
-        fuelUp(volume);
-    }
-
     @Override
     public void fuelUp(int petrolVolume) {
         int volume = getAvailablePetrol() + petrolVolume;
@@ -52,4 +47,8 @@ public class Bus extends FuelAuto {
         this.passengerNumber = passengerNumber;
     }
 
+    @Override
+    public void energize() {
+        fuelUp(getTankVolume() - getAvailablePetrol());
+    }
 }

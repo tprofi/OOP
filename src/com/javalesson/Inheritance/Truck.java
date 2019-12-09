@@ -26,4 +26,9 @@ public class Truck extends FuelAuto {
     public void unLoad () {
         System.out.println("Cargo unloaded");
     }
+
+    @Override
+    public void energize() {
+        fuelUp(getTankVolume()-getAvailablePetrol());
+    }
 }

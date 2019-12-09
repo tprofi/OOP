@@ -1,6 +1,6 @@
 package com.javalesson.oop;
 
-public enum Size {
+enum Size {
     VERY_SMALL("XS"), SMALL("S"), AVERAGE("M"), BIG("L"), VERY_BIG("XL"), UNDEFIND(""), TEHEXPERT("T");
 
     Size (String abbreviation) {

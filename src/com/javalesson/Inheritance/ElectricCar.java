@@ -11,7 +11,7 @@ public class ElectricCar extends Auto {
         this.passengersNumber = passengersNumber;
     }
 
-    public void charge () {
+    private void charge () {
         System.out.println("Battery is charging");
     }
 
@@ -29,5 +29,10 @@ public class ElectricCar extends Auto {
 
     public void setPassengersNumber (int passengersNumber) {
         this.passengersNumber = passengersNumber;
+    }
+
+    @Override
+    public void energize() {
+        charge();
     }
 }

@@ -1,6 +1,6 @@
 package com.javalesson.Inheritance;
 
-public class Auto {
+public abstract class Auto {
     boolean isRunning;
     private String producer;
     private String model;
@@ -12,6 +12,7 @@ public class Auto {
         this.model = model;
         this.engine = engine;
     }
+    public abstract void energize();
 
     void start() {
         isRunning = true;

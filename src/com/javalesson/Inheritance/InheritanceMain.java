@@ -14,8 +14,14 @@ public class InheritanceMain {
         truck.start();
         truck.stop();
 
+        runCar(bus);
+        runCar(car);
     }
 
-
+    private static void runCar(Auto auto) {
+        auto.start();
+        auto.stop();
+        auto.energize();
+    }
 
 }
