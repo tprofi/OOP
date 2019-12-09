@@ -1,7 +1,7 @@
 package com.javalesson.oop;
 
-public class Main {
-    public static void main (String[] args) {
+class Main {
+    public static void main(String[] args) {
 
 
         Dog doberman = new Dog();
@@ -36,8 +36,8 @@ public class Main {
 //        System.out.println(s1);
 
         Size[] values = Size.values();
-        for (int i = 0; i < values.length; i++) {
-            System.out.println(values[i]);
+        for (Size value : values) {
+            System.out.println(value);
         }
 
     }
