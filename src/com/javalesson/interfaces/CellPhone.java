@@ -13,7 +13,7 @@ public class CellPhone extends Electronics {
     }
 
     @Override
-    public double calcOrderPrice() {
+    public int calcOrderPrice() {
         return getQuantity() * getPrice();
     }
 }

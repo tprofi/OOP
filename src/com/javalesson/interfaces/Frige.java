@@ -14,7 +14,7 @@ public class Frige extends Electronics {
     }
 
     @Override
-    public double calcOrderPrice() {
+    public int calcOrderPrice() {
         return getQuantity() * getPrice();
     }
 }

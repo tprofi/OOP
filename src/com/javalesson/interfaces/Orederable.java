@@ -1,5 +1,7 @@
 package com.javalesson.interfaces;
 
+
+@FunctionalInterface
 public interface Orederable {
-    double calcOrderPrice();
+    int calcOrderPrice();
 }
