@@ -16,6 +16,7 @@ public class InheritanceMain {
 
         runCar(bus);
         runCar(car);
+        runCar(car);
     }
 
     private static void runCar(Auto auto) {
