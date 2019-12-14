@@ -12,7 +12,8 @@ public class InterfaceRunner {
     private static void printDeliveryPrice(Pricable del) {
         System.out.println("Delivery price = " + del.calcDeliveryPrice());
         System.out.println("Price is = " + del.calcOrderPrice());
-    }
+        System.out.println("Price all = " + del.calcPrice());
 
+    }
 }
 
