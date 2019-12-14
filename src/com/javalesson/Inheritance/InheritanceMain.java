@@ -9,10 +9,10 @@ public class InheritanceMain {
         Auto car = new ElectricCar("Tesla", "Model S", 4, 100500);
 
 
-        bus.start();
+/*        bus.start();
         bus.stop();
         truck.start();
-        truck.stop();
+        truck.stop();*/
 
         runCar(bus);
         runCar(car);
