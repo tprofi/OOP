@@ -1,6 +1,6 @@
 package com.javalesson.interfaces;
 
-public class Pizza implements Deliverable {
+public class Pizza implements Pricable {
 
     private String name;
     private int quantity;
@@ -14,26 +14,24 @@ public class Pizza implements Deliverable {
         this.size = size;
     }
 
-    @Override
-    public int calcDeliveryPrice() {
-        if (size == Size.VERY_BIG || quantity > 1)
-            return 0;
-        else return 7;
-    }
-
     public String getName() {
         return name;
     }
 
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public int getPrice() {
-        return price;
-    }
 
     public Size getSize() {
         return size;
+    }
+
+    @Override
+    public int calcDeliveryPrice() {
+        if (size == Size.VERY_BIG || quantity > 1) {
+            return 0;
+        } else return 7;
+    }
+
+    @Override
+    public int calcOrderPrice() {
+        return quantity * price;
     }
 }

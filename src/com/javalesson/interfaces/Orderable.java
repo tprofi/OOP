@@ -2,6 +2,6 @@ package com.javalesson.interfaces;
 
 
 @FunctionalInterface
-public interface Orederable {
+public interface Orderable {
     int calcOrderPrice();
 }

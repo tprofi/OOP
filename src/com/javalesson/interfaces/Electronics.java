@@ -1,6 +1,6 @@
 package com.javalesson.interfaces;
 
-public abstract class Electronics implements Deliverable, Orederable {
+public abstract class Electronics implements Pricable {
 
     private String make;
     private String model;
@@ -28,5 +28,10 @@ public abstract class Electronics implements Deliverable, Orederable {
 
     public int getPrice() {
         return price;
+    }
+
+    @Override
+    public int calcOrderPrice() {
+        return getQuantity() * getPrice();
     }
 }

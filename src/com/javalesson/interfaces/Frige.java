@@ -12,9 +12,4 @@ public class Frige extends Electronics {
             return 0;
         else return 25;
     }
-
-    @Override
-    public int calcOrderPrice() {
-        return getQuantity() * getPrice();
-    }
 }

@@ -7,13 +7,10 @@ public class CellPhone extends Electronics {
 
     @Override
     public int calcDeliveryPrice() {
-        if (getPrice() >= 150)
+        if (getPrice() >= 150) {
             return 0;
-        else return 10;
-    }
-
-    @Override
-    public int calcOrderPrice() {
-        return getQuantity() * getPrice();
+        } else {
+            return 10;
+        }
     }
 }
