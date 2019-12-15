@@ -11,8 +11,24 @@ public class Student {
         this.grade = grade;
     }
 
-    public static void main(String[] args) {
-        Student st1 = new Student("Ivan", 3, 9.5);
-        Student st2 = new Student("Petr", 1, 5.3);
+    static void swap(Student s1, Student s2) {
+        Student s3 = s1;
+        s1 = s2;
+        s2 = s3;
+        System.out.println(s1);
+        System.out.println(s2);
+    }
+
+    void changeName(Student s1) {
+        s1.name = "Vasiliy";
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", course=" + course +
+                ", grade=" + grade +
+                '}';
     }
 }
