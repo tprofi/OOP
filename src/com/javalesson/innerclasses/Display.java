@@ -2,26 +2,33 @@ package com.javalesson.innerclasses;
 
 public class Display {
 
-    private final int DISPLAY_HEIGHT = 1920;
-    private final int DISPLAY_WIDTH = 1280;
+    private static final int DISPLAY_HEIGHT = 1920;
+    private static final int DISPLAY_WIDTH = 1280;
 
     public Display() {
         Pixel pixel = new Pixel(10, 10, Color.BLUE);
     }
 
-    public class Pixel {
+    private class Pixel {
         private int x;
         private int y;
         Color color;
 
-        public Pixel(int x, int y, Color color) {
-            this.x = x;
-            this.y = y;
-            this.color = color;
+        private Pixel(int x, int y, Color color) {
+            if (x >= 0 && x <= DISPLAY_WIDTH && 0 <= y && y <= DISPLAY_HEIGHT) {
+                this.x = x;
+                this.y = y;
+                this.color = color;
+                System.out.println("Creating color " + color + " pixel at (" + x + "," + y + ")");
+            } else {
+                throw new IllegalArgumentException("Coordinates x and y should be between 0-"+DISPLAY_WIDTH+" and 0-"+DISPLAY_HEIGHT);
+            }
         }
+
     }
 
     public enum Color {
         RED, GREEN, BLUE, CYAN, MAGENTA, YELLOW, BLACK
     }
+
 }
