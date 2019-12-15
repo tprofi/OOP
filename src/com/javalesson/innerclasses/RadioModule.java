@@ -7,6 +7,8 @@ public class RadioModule {
 
     public void call(String number) {
         int length = 10;
+
+
         class GSMModule {
             private String phoneNumber;
             private int validNumber;

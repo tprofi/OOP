@@ -5,6 +5,11 @@ class CellPhone {
     private String make;
     private Display display;
     private RadioModule gsm;
+    private AbstractPhoneButton button;
+
+    public interface AbstractPhoneButton {
+        void click();
+    }
 
     public CellPhone(String model, String make) {
         this.model = model;
@@ -14,9 +19,15 @@ class CellPhone {
     public void turnOn() {
         initDisplay();
         gsm = new RadioModule();
+        initButton();
+    }
+
+    public void initButton() {
+        button = () -> System.out.println("Button click");
     }
 
     public void call(String number) {
+        button.click();
         gsm.call(number);
     }
 
