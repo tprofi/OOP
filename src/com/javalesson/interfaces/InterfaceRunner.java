@@ -14,6 +14,7 @@ public class InterfaceRunner {
         System.out.println("Price is = " + del.calcOrderPrice());
         System.out.println("Price all = " + del.calcPrice());
 
+
     }
 }
 
