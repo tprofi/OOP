@@ -28,4 +28,9 @@ public class AverageStudentGrade implements Comparable<AverageStudentGrade> {
         }
         return name.compareTo(that.getName());
     }
+
+    @Override
+    public String toString() {
+        return "Students name: " + name + " Grade:" + averageGrade;
+    }
 }

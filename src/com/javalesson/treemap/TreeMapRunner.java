@@ -5,6 +5,7 @@ import java.util.*;
 public class TreeMapRunner {
     public static void main(String[] args) {
         NavigableMap<AverageStudentGrade, Set<SubjectGrade>> grades = createGrades();
+        printGrades(grades, true);
     }
 
     private static void printGrades(Map<AverageStudentGrade, Set<SubjectGrade>> grades, boolean printValue) {
@@ -18,7 +19,7 @@ public class TreeMapRunner {
         }
     }
 
-    private static NavigableMap<AverageStudentGrade, Set<SubjectGrade>> createGrades() {
+    public static NavigableMap<AverageStudentGrade, Set<SubjectGrade>> createGrades() {
         Set<SubjectGrade> alexGrades = new HashSet<>();
         alexGrades.add(new SubjectGrade("Mathematics", 85));
         alexGrades.add(new SubjectGrade("Biology", 85));
@@ -27,25 +28,25 @@ public class TreeMapRunner {
         alexGrades.add(new SubjectGrade("English", 85));
 
         Set<SubjectGrade> philGrades = new HashSet<>();
-        alexGrades.add(new SubjectGrade("Mathematics", 85));
-        alexGrades.add(new SubjectGrade("Biology", 85));
-        alexGrades.add(new SubjectGrade("History", 85));
-        alexGrades.add(new SubjectGrade("Physics", 85));
-        alexGrades.add(new SubjectGrade("English", 85));
+        philGrades.add(new SubjectGrade("Mathematics", 85));
+        philGrades.add(new SubjectGrade("Biology", 85));
+        philGrades.add(new SubjectGrade("History", 85));
+        philGrades.add(new SubjectGrade("Physics", 85));
+        philGrades.add(new SubjectGrade("English", 85));
 
         Set<SubjectGrade> andreyGrades = new HashSet<>();
-        alexGrades.add(new SubjectGrade("Mathematics", 85));
-        alexGrades.add(new SubjectGrade("Biology", 85));
-        alexGrades.add(new SubjectGrade("History", 85));
-        alexGrades.add(new SubjectGrade("Physics", 85));
-        alexGrades.add(new SubjectGrade("English", 85));
+        andreyGrades.add(new SubjectGrade("Mathematics", 85));
+        andreyGrades.add(new SubjectGrade("Biology", 85));
+        andreyGrades.add(new SubjectGrade("History", 85));
+        andreyGrades.add(new SubjectGrade("Physics", 85));
+        andreyGrades.add(new SubjectGrade("English", 85));
 
         Set<SubjectGrade> ritaGrades = new HashSet<>();
-        alexGrades.add(new SubjectGrade("Mathematics", 85));
-        alexGrades.add(new SubjectGrade("Biology", 85));
-        alexGrades.add(new SubjectGrade("History", 85));
-        alexGrades.add(new SubjectGrade("Physics", 85));
-        alexGrades.add(new SubjectGrade("English", 85));
+        ritaGrades.add(new SubjectGrade("Mathematics", 85));
+        ritaGrades.add(new SubjectGrade("Biology", 85));
+        ritaGrades.add(new SubjectGrade("History", 85));
+        ritaGrades.add(new SubjectGrade("Physics", 85));
+        ritaGrades.add(new SubjectGrade("English", 85));
 
         NavigableMap<AverageStudentGrade, Set<SubjectGrade>> map = new TreeMap<>();
         map.put(new AverageStudentGrade("Alex", calcAverage(alexGrades)), alexGrades);

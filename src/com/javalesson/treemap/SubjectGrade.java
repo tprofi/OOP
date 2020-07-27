@@ -32,4 +32,9 @@ public class SubjectGrade {
     public int hashCode() {
         return Objects.hash(subject, grade);
     }
+
+    @Override
+    public String toString() {
+        return "Grade: " + subject + "Grade: " + grade;
+    }
 }
