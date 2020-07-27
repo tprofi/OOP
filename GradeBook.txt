@@ -1,25 +1,25 @@
-==========================================
+
 Student: Alex Average Grade: 85.0
 Subject: Mathematics Grade: 85
 Subject: Biology Grade: 85
 Subject: English Grade: 85
 Subject: History Grade: 85
 Subject: Physics Grade: 85
-==========================================
+
 Student: Andrey Average Grade: 85.0
 Subject: Mathematics Grade: 85
 Subject: Biology Grade: 85
 Subject: English Grade: 85
 Subject: History Grade: 85
 Subject: Physics Grade: 85
-==========================================
+
 Student: Phil Average Grade: 85.0
 Subject: Mathematics Grade: 85
 Subject: Biology Grade: 85
 Subject: English Grade: 85
 Subject: History Grade: 85
 Subject: Physics Grade: 85
-==========================================
+
 Student: Rita Average Grade: 85.0
 Subject: Mathematics Grade: 85
 Subject: Biology Grade: 85
