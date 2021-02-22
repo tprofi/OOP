@@ -10,7 +10,7 @@ import java.util.NavigableMap;
 import java.util.Set;
 
 public class IOMain {
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args) throws IOException {
         NavigableMap<AverageStudentGrade, Set<SubjectGrade>> grades = TreeMapRunner.createGrades();
         writeFile(grades);
     }
