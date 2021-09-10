@@ -2,20 +2,20 @@ package com.javalesson.javaio;
 
 import com.javalesson.treemap.AverageStudentGrade;
 import com.javalesson.treemap.SubjectGrade;
-import com.javalesson.treemap.TreeMapRunner;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.NavigableMap;
+import java.io.ObjectOutputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
 import java.util.Set;
+import java.util.SortedMap;
 
 public class Writer {
 
-
-    static void writeFile() throws IOException {
-        NavigableMap<AverageStudentGrade, Set<SubjectGrade>> grades = TreeMapRunner.createGrades();
-        String FILE_NAME = "GradeBook.txt";
-        FileWriter fileWriter = new FileWriter(FILE_NAME);
+    static void writeFile(SortedMap<AverageStudentGrade, Set<SubjectGrade>> grades, String filename) throws IOException {
+        FileWriter fileWriter = new FileWriter(filename);
         for (AverageStudentGrade gradeKey : grades.keySet()) {
             fileWriter.write("==========================================\n");
             fileWriter.write("Student: " + gradeKey.getName() + " Average Grade: " + gradeKey.getAverageGrade() + "\n");
@@ -24,5 +24,18 @@ public class Writer {
             }
         }
         fileWriter.close();
+    }
+
+    public void writeObject(List<Student> studentList, String fileName) throws IOException {
+        ObjectOutputStream out = new ObjectOutputStream(Files.newOutputStream(Paths.get(fileName)));
+        try {
+            for (Student student : studentList) {
+                out.writeObject(student);
+            }
+        } catch (IOException e) {
+            System.out.println("File corrupt. Terminate process");
+            e.printStackTrace();
+        }
+        out.close();
     }
 }
