@@ -3,14 +3,13 @@ package com.javalesson.javaio;
 import com.javalesson.treemap.AverageStudentGrade;
 import com.javalesson.treemap.SubjectGrade;
 
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.List;
-import java.util.Set;
-import java.util.SortedMap;
+import java.util.*;
 
 public class Writer {
 
@@ -37,5 +36,22 @@ public class Writer {
             e.printStackTrace();
         }
         out.close();
+    }
+
+    private static void inputWrite(String fileName, Scanner scanner) throws FileNotFoundException {
+        Formatter formatter = new Formatter(fileName);
+
+        System.out.println("Enter data");
+        int i = 0;
+        while (i < 3) {
+            try {
+                formatter.format("%d, %s, %s, %.2f%n", scanner.nextInt(), scanner.next(), scanner.next(), scanner.nextFloat());
+                i++;
+            } catch (InputMismatchException e) {
+                System.out.println("Incorrect");
+                scanner.nextLine();
+            }
+            formatter.close();
+        }
     }
 }
