@@ -30,11 +30,6 @@ class Main {
 
         Skotina.bite();
 
-//        Size s =Size.SMALL;
-//        System.out.println(s);
-//        Size s1 = Size.valueOf("BIG");
-//        System.out.println(s1);
-
         Size[] values = Size.values();
         for (Size value : values) {
             System.out.println(value);
