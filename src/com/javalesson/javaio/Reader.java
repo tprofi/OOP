@@ -2,6 +2,7 @@ package com.javalesson.javaio;
 
 import java.io.*;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
@@ -36,5 +37,14 @@ public class Reader {
             e.printStackTrace();
         }
         return students;
+    }
+
+    void readFileFull(String filename) throws IOException {
+        Path path = Paths.get(filename);
+
+        List<String> lines = Files.readAllLines(path);
+        for (String l : lines) {
+            System.out.println(l);
+        }
     }
 }

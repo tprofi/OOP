@@ -23,7 +23,7 @@ public class IOMain {
         outputObjects(BINARY_FILE_NAME, reader);
         Writer.writeFile(grades, FILE_NAME);
         Reader.readFile(FILE_NAME);*/
-        System.out.println(System.getenv());
+        new Reader().readFileFull(FILE_NAME);
     }
 
     private static void processGrades(SortedMap<AverageStudentGrade, Set<SubjectGrade>> grades, Writer writer, String fileName) throws IOException {
