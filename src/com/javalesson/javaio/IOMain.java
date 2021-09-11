@@ -2,7 +2,6 @@ package com.javalesson.javaio;
 
 import com.javalesson.treemap.AverageStudentGrade;
 import com.javalesson.treemap.SubjectGrade;
-import com.javalesson.treemap.TreeMapRunner;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -24,6 +23,7 @@ public class IOMain {
         outputObjects(BINARY_FILE_NAME, reader);
         Writer.writeFile(grades, FILE_NAME);
         Reader.readFile(FILE_NAME);*/
+        System.out.println(System.getenv());
     }
 
     private static void processGrades(SortedMap<AverageStudentGrade, Set<SubjectGrade>> grades, Writer writer, String fileName) throws IOException {
